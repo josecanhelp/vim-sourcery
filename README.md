@@ -127,6 +127,7 @@ Sourcery should be able to follow the `.vimrc` / `init.vim` symlink to find your
 
 ```vim
 let g:sourcery#vim_dotfiles_path = '~/.dotfiles/vim'
+sourcery#init()
 ```
 
 > _**Tip:** Again, you may customize the above structure however you see fit! Just be sure to [source & track any custom paths](#sourcing--tracking) you wish to configure._
@@ -219,7 +220,7 @@ Maybe you want to setup a custom annotation and jump mapping for something other
     nmap <silent><buffer> gh :SourceryGoToRelatedAnnotation Highlights<CR>
     ```
 
-    > _**Note:** If you call this command with a `!` bang modifier, Sourcery will attempt to find a related file before looking for a related annotation, similar to how Sourcery handles going to related config files and annotations. You may also pass a second path regex argument to scope where Sourcery will look for your file and/or annotation._
+    > _**Note:** If you call this command with a `!` bang modifier, Sourcery will attempt to find a related file / looking for a related annotation, similar to how Sourcery handles going to related config files and annotations. You may also pass a second path regex argument to scope where Sourcery will look for your file and/or annotation._
 
 3. You should now be able to jump to your custom annotation!
 
